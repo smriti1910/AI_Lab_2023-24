@@ -14,19 +14,39 @@ To write a logic program to design a circuit like half adder and half subtractor
 8. Stop the program.
 
 ### Program:
+```
+:- discontiguous and/3.
+:- discontiguous xor/3.
+:- discontiguous not/2.
 
+and(0, 0, 0).
+and(0, 1, 0).
+and(1, 0, 0).
+and(1, 1, 1).
 
+xor(0, 0, 0).
+xor(0, 1, 1).
+xor(1, 0, 1).
+xor(1, 1, 0).
 
+not(0, 1).
+not(1, 0).
 
+% Define half adder
+halfadder(A, B, Sum, Carry) :-
+    xor(A, B, Sum),
+    and(A, B, Carry).
 
-
-
-
-
-
-
+% Define half subtractor
+halfsubtractor(A, B, Diff, Borrow) :-
+    xor(A, B, Diff),
+    not(B, B_Not),
+    and(A, B_Not, Borrow).
+```
 ### Output:
 
+![Lab_exp7](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/10a0d8a4-f907-4c55-9f69-41676e832617)
+![Lab_exp7(sub)](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/a3d3216c-d752-45a8-a696-b730a881f119)
 
 
 ### Result:
