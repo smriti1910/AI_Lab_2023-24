@@ -15,6 +15,7 @@ Write a Prolog program to build a medical Diagnosis Expert System.
 7. Call the predicates and Collect the symptoms of Patient and give the hypothesis of disease.
         
 ### Program:
+```
 hypothesis(Patient,flu) :-
         symptom(Patient,fever),
        symptom(Patient,headache),
@@ -40,7 +41,7 @@ hypothesis(Patient,measles) :-
 symptom(raju,headache).
 symptom(raju,sneezing).
 symptom(raju,sore_throat).
-
+```
 ### Output:
 ![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/2b335374-e6a6-4863-a33c-281f4d50f263)
 
