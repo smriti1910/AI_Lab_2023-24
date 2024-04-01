@@ -56,7 +56,7 @@ Problem 1: Problem.pddl
    (:goal (and (on a b))))
 ```
 ### Output/Plan:
-![lab_exp11(ss1)](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/7ffe517d-5dfd-4e54-a2d0-c857feb8591a)
+![lab_exp11(ss1)](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/1574027a-4116-4106-9fef-68b923b70808)
 
 ### Input
 Problem 2: Problem2.pddl
@@ -69,7 +69,8 @@ Problem 2: Problem2.pddl
 	   (:goal (and (on a b) (on b c))))
 ```
 ### Output/Plan:
-![Uploading image.png…]()
+![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/73b7b663-721f-49a5-a01e-0f3626ebca13)
+
 
 ### Result:
 Thus the plan was found for the initial and goal state of block world problem.
