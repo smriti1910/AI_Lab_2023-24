@@ -4,7 +4,9 @@
 ### AIM: 
 To write a program to train the classifier for reccommendation system thta recommends books based on user ratings.
 ###  Algorithm:
-
+1. Load data, create user-item matrix, calculate user similarity using cosine similarity.
+2. Predict ratings for target user based on similar user ratings.
+3. Filter out rated books, select top N recommendations with highest predicted ratings.
 ### Program:
 # Import necessary libraries
 import pandas as pd
@@ -47,11 +49,15 @@ for book_id, predicted_rating in top_recommendations.items():
     book_title = books.loc[books['book_id'] == book_id, 'title'].iloc[0]
     print("Book ID: {}, Title: {}, Predicted Rating: {:.2f}".format(book_id, book_title, predicted_rating))
 
+### Output:
 
-## Output:
+Top 5 Recommendations for User 1: 
 
-
-
+Book ID: 2, Title: Harry Potter and the Sorcerer's Stone (Harry Potter, #1), Predicted Rating: 0.00
+Book ID: 5, Title: The Great Gatsby, Predicted Rating: 0.00
+Book ID: 8, Title: The Catcher in the Rye, Predicted Rating: 0.00
+Book ID: 13, Title: 1984, Predicted Rating: 0.00
+Book ID: 14, Title: Animal Farm, Predicted Rating: 0.00
 
 ### Result:
 Thus the system was trained successfully and the prediction was carried out.
