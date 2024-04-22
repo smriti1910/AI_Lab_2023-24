@@ -1,14 +1,56 @@
 # Ex.No: 10 Learning – Use Supervised Learning  
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 22.04.2024                                                                           
+### REGISTER NUMBER : 212221040156
 ### AIM: 
-To write a program to train the classifier for -----------------.
+To write a program to train the classifier for reccommendation system thta recommends books based on user ratings.
 ###  Algorithm:
 
 ### Program:
+# Import necessary libraries
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Load a small subset of the dataset
+ratings = pd.read_csv('https://raw.githubusercontent.com/zygmuntz/goodbooks-10k/master/samples/ratings.csv')
+books = pd.read_csv('https://raw.githubusercontent.com/zygmuntz/goodbooks-10k/master/samples/books.csv')
+
+# Data preprocessing
+# For simplicity, we'll keep only the relevant columns
+ratings = ratings[['user_id', 'book_id', 'rating']]
+
+# Implement Collaborative Filtering
+# Create user-item matrix
+user_item_matrix = ratings.pivot_table(index='user_id', columns='book_id', values='rating').fillna(0)
+
+# Calculate user similarity using cosine similarity
+user_similarity = cosine_similarity(user_item_matrix)
+
+# Generate recommendations for a target user (e.g., user with ID 1)
+target_user_id = 1
+similarities = user_similarity[target_user_id - 1]
+predicted_ratings = similarities.dot(user_item_matrix.values) / similarities.sum()
+
+# Convert predicted ratings into DataFrame
+recommendations = pd.DataFrame(predicted_ratings.reshape(1, -1), columns=user_item_matrix.columns)
+
+# Filter out books that the user has already rated
+already_rated = ratings[ratings['user_id'] == target_user_id]['book_id']
+recommendations = recommendations.drop(already_rated, axis=1)
+
+# Get top N recommendations
+top_n = 5
+top_recommendations = recommendations.iloc[0].nlargest(top_n)
+
+# Print top recommendations
+print("Top {} Recommendations for User {}: \n".format(top_n, target_user_id))
+for book_id, predicted_rating in top_recommendations.items():
+    book_title = books.loc[books['book_id'] == book_id, 'title'].iloc[0]
+    print("Book ID: {}, Title: {}, Predicted Rating: {:.2f}".format(book_id, book_title, predicted_rating))
 
 
-### Output:
+## Output:
+
+
 
 
 ### Result:
