@@ -24,8 +24,7 @@ factorial(A,B) :-
 
 ### Output:
 
-![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/5ad5e959-c677-452a-b7c1-aa25026fa47a)
-
+![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/6d1800a2-6281-4041-89a0-d5405fd4bd17)
 
 ### Result:
 Thus the factorial of given number was found by logic programming. 
