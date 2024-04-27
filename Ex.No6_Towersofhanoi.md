@@ -30,6 +30,7 @@ move(M,Z,Y,X).
 ```
 
 ### Output:
+
 ![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/3f60619c-6e04-43b5-beec-7e9330a75dbc)
 
 ### Result:
