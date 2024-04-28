@@ -39,8 +39,7 @@ Domain.pddl:
 	     :precondition (and (location ?x) (location ?y) (at box ?y) (at monkey ?y) 
 				 (on-floor))
 	     :effect (and (at monkey ?x) (not (at monkey ?y))
-			   (at box ?x)    (not (at box ?y))))
-  ;; getting bananas
+			   (at box ?x)    (not (at box ?y))));; getting bananas
   (:action GET-KNIFE
 	     :parameters (?y)
 	     :precondition (and (location ?y) (at knife ?y) (at monkey ?y))
@@ -84,6 +83,5 @@ Problem :
 ```
 ### Output/Plan:
 ![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/6d53c6c0-b325-4ca9-9d4c-2a9e6162a253)
-
 ### Result:
 Thus the plan was found for the initial and goal state of given problem.
