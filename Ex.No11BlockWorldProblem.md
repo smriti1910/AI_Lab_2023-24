@@ -56,7 +56,8 @@ Problem 1: Problem.pddl
    (:goal (and (on a b))))
 ```
 ### Output/Plan:
-![lab_exp11(ss1)](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/1574027a-4116-4106-9fef-68b923b70808)
+![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/3daf854b-415f-4b6b-8d76-e65a97be4f43)
+
 
 ### Input
 Problem 2: Problem2.pddl
