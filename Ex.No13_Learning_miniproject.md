@@ -8,6 +8,7 @@ To write a program to train the classifier for reccommendation system thta recom
 2. Predict ratings for target user based on similar user ratings.
 3. Filter out rated books, select top N recommendations with highest predicted ratings.
 ### Program:
+```
 # Import necessary libraries
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
@@ -48,7 +49,7 @@ print("Top {} Recommendations for User {}: \n".format(top_n, target_user_id))
 for book_id, predicted_rating in top_recommendations.items():
     book_title = books.loc[books['book_id'] == book_id, 'title'].iloc[0]
     print("Book ID: {}, Title: {}, Predicted Rating: {:.2f}".format(book_id, book_title, predicted_rating))
-
+```
 ### Output:
 
 ![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/4c3ba7fd-d141-4b52-b0f4-2830742e45d9)
