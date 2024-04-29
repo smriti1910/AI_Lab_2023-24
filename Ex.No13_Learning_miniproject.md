@@ -51,13 +51,8 @@ for book_id, predicted_rating in top_recommendations.items():
 
 ### Output:
 
-Top 5 Recommendations for User 1: 
+![image](https://github.com/smriti1910/AI_Lab_2023-24/assets/133334803/4c3ba7fd-d141-4b52-b0f4-2830742e45d9)
 
-Book ID: 2, Title: Harry Potter and the Sorcerer's Stone (Harry Potter, #1), Predicted Rating: 0.00
-Book ID: 5, Title: The Great Gatsby, Predicted Rating: 0.00
-Book ID: 8, Title: The Catcher in the Rye, Predicted Rating: 0.00
-Book ID: 13, Title: 1984, Predicted Rating: 0.00
-Book ID: 14, Title: Animal Farm, Predicted Rating: 0.00
 
 ### Result:
 Thus the system was trained successfully and the prediction was carried out.
